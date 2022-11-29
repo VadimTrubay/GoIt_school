@@ -1,4 +1,2 @@
-print('hello world')
-
-exit
-ChildProcessError
+import math
+print(math.sqrt(25))
