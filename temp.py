@@ -1,3 +1,1 @@
-print('hello world')
-exit
-except
+a = 'my_temp'
