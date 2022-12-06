@@ -68,6 +68,7 @@
 #     chunk = pool // quantity
 # except ZeroDivisionError:
 #     print('Divide by zero completed!')
+
 # result = None
 # operand = None
 # operator = None
@@ -105,10 +106,11 @@
 #             else:
 #                 print("Oops! It is not a valid operator. Try again.")
 #         wait_for_number = True
-# # import math
-# # print(math.ceil(2.1))
-# # print(math.floor(2.7))
-# # print(round(2.1))
+
+# import math
+# print(math.ceil(2.1))
+# print(math.floor(2.7))
+# print(round(2.1))
 
 # print('ltrh' not in 'Hello')
 # operator = 4
@@ -120,8 +122,31 @@
 # age = re.search('\d+', s)
 # print(age)
 
-age = 9
-if age % 2 == 0:
-    print('hello')
-    exit(4)
-print('vasia')
+# age = 9
+# if age % 2 == 0:
+#     print('hello')
+#     exit(4)
+# print('vasia')
+
+# number = int(input('Введите трехзначное число>: '))
+# new_number_1 = number % 10
+# print(new_number_1)
+# temp_number = number // 10
+# print(temp_number)
+# new_numbers_2 = temp_number % 10
+# print(new_numbers_2)
+# new_numbers_3 = temp_number // 10
+# print(new_numbers_3)
+#
+# print(f'Новое перевернутое число: {new_number_1}{new_numbers_2}{new_numbers_3}')
+
+# first_haus = 3.5 * 50
+# second_haus = 4 * 60
+# count = 3 * 2 * 0.25
+# finally_1 = first_haus // count
+# finally_2 = second_haus // count
+# print(finally_1, finally_2)
+
+a = float(input('enter a: '))
+b = float(input('enter b: '))
+print(- b / a)
