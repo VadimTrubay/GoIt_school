@@ -107,6 +107,20 @@
 #                 print("Oops! It is not a valid operator. Try again.")
 #         wait_for_number = True
 
+# n = int(input('enter n: '))
+# number = 0
+# while number < n:
+# 	number += 3
+# 	print(number)
+
+a = int(input('enter a: '))
+b = int(input('enter b: '))
+sum = 0
+for i in range(a, b + 1):
+	if i % 2 == 0:
+		sum += i
+print(sum)
+
 # import math
 # print(math.ceil(2.1))
 # print(math.floor(2.7))
@@ -147,6 +161,89 @@
 # finally_2 = second_haus // count
 # print(finally_1, finally_2)
 
-a = float(input('enter a: '))
-b = float(input('enter b: '))
-print(- b / a)
+# a = float(input('enter a: '))
+# b = float(input('enter b: '))
+# print(- b / a)
+
+# from decimal import Decimal
+# sec = Decimal(input('enter the sec: '))
+# hours = sec // Decimal(3600)
+# hours_2 = hours * Decimal(3600)
+# minutes = (sec - hours) // Decimal(60)
+# seconds = sec - hours - (minutes * Decimal(60))
+# print(hours, ':', minutes, ':', seconds)
+
+# N = int(input('Enter N>: '))
+# h = 1
+# while N >= 1:
+#     print((N - 1) * ' ' + h * '*')
+#     h += 1
+#     N -= 1
+#
+# num = int(input('enter num: '))
+# print('even' if num % 2 == 0 else 'odd')
+
+# arr = [34, 15, 88, 2]
+# def sum_arr(arr):
+#     sum = 0
+#     for i in arr:
+#         sum += i
+#     print(sum)
+# sum_arr(arr)
+
+# if len(arr) == 1:
+#     return arr[0]
+# else:
+#     return arr[0] + find_smallest_int(arr[1:])
+
+# arr = [78, 56, 232, 12, -11, 43]
+#
+# def find_smallest_int(arr):
+#     min_int = arr[0]
+#     for i in arr:
+#         if i < min_int:
+#             min_int = i
+#     return min_int
+# print(find_smallest_int(arr))
+
+# arr = [78, 56, 232, 12, -11, 43]
+# print(min(arr))
+#
+# arr = [78, 56, 232, 12, -11, 43]
+# arr.sort()
+# print(arr[0])
+
+# def football_points(wins, draws, losses):
+#     sum = wins * 3 + draws * 1 + losses * 0
+#     return sum
+# print(football_points(3, 4 , 2))
+
+# def are_numbers_equal(a, b):
+#     return True if a == b else False
+
+# def find_smallest_number(my_list):
+#     a = my_list[0]
+#     for i in my_list:
+#         if i < a:
+#             a = i
+#     return a
+#
+# def less_than_100(a, b):
+#     return True if (a + b) < 100 else False
+
+# def difference(nums):
+#     return max(nums) - min(nums)
+# print(difference([10, 15, 20, 2, 10, 6]))
+
+# def hello_name(name):
+#     return f'Привет, {name}!'
+
+# print(0/ 100)
+# def divisible(num):
+# 	return True if num / 100 == 0 or \
+# 	num // 100 > 0 or num / 100 <= - 1 else False
+# print(divisible(0))
+
+# def is_empty(string):
+# 	return False if string else True
+# print(is_empty(' '))
