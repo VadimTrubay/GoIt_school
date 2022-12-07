@@ -113,13 +113,13 @@
 # 	number += 3
 # 	print(number)
 
-a = int(input('enter a: '))
-b = int(input('enter b: '))
-sum = 0
-for i in range(a, b + 1):
-	if i % 2 == 0:
-		sum += i
-print(sum)
+# a = int(input('enter a: '))
+# b = int(input('enter b: '))
+# n = a * '*'
+# h = 0
+# while h != b:
+# 	h += 1
+# 	print(n)
 
 # import math
 # print(math.ceil(2.1))
@@ -247,3 +247,18 @@ print(sum)
 # def is_empty(string):
 # 	return False if string else True
 # print(is_empty(' '))
+
+while True:
+    try:
+        age = int(input('How old are you?: '))
+        if age >= 18:
+            print('Access allowed')
+            break
+        else:
+            print('Access denied')
+            break
+    except ValueError:
+        print(f'age is not a number, please enter a number')
+    finally:
+        print('-' * 30)
+
