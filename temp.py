@@ -247,18 +247,29 @@
 # def is_empty(string):
 # 	return False if string else True
 # print(is_empty(' '))
+#
+# while True:
+#     try:
+#         age = int(input('How old are you?: '))
+#         if age >= 18:
+#             print('Access allowed')
+#             break
+#         else:
+#             print('Access denied')
+#             break
+#     except ValueError:
+#         print(f'age is not a number, please enter a number')
+#     finally:
+#         print('-' * 30)
 
-while True:
-    try:
-        age = int(input('How old are you?: '))
-        if age >= 18:
-            print('Access allowed')
-            break
-        else:
-            print('Access denied')
-            break
-    except ValueError:
-        print(f'age is not a number, please enter a number')
-    finally:
-        print('-' * 30)
+# def divides_evenly(a, b):
+#     return True if a % b == 0 else False
+# print(divides_evenly(85, 4))
 
+# def isEvenOrOdd(number):
+# 	return 'четное' if number % 2 == 0 else 'нечетное'
+
+
+def greeting():
+    print('Hello world')
+greeting()
