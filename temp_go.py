@@ -276,7 +276,86 @@
 
 # print(bool(1 and 1))
 
-default_name = 'Unknown'
-name = input('Please enter a name: ')
-current_name = name or default_name
-print(f'you name is {current_name}')
+# def flip_bool(boolean):
+# 	return False if boolean == 1 else True
+
+# default_name = 'Unknown'
+# name = input('Please enter a name: ')
+# current_name = name or default_name
+# print(f'you name is {current_name}')
+
+#
+# while True:
+#     name = input('Please enter a name: ')
+#     print(name)
+#     if not name:
+#         print('end')
+#         break # break or continue
+
+# list_goods = ''
+# while True:
+#     goods = input('take a goods: ') + ',' + '\n'
+#
+#     if goods == 's' + ',' + '\n' :
+#         new_list = list_goods[:-2]
+#         break
+#     list_goods += goods
+#
+# print(new_list)
+
+# a = input('Enter a>: ')
+# if a not in 'vadim':
+#     print('yes')
+# elif...:
+#     pass
+# else:
+#     print('no')
+
+# a = 'abcdefghijklmnopqrstuvwxyz'
+# for latter in a:
+#     print(latter)
+#     if latter == 'b':
+#         break
+# print('end')
+
+
+def google(number):
+
+    for i in range(number):
+        number -= 1
+        print(f"G{'o' * number}gle")
+
+
+google(10)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
