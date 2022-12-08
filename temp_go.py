@@ -274,4 +274,9 @@
 #     print('Hello world')
 # greeting()
 
-print(1 and 1)
+# print(bool(1 and 1))
+
+default_name = 'Unknown'
+name = input('Please enter a name: ')
+current_name = name or default_name
+print(f'you name is {current_name}')
