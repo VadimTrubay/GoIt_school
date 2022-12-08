@@ -270,6 +270,8 @@
 # 	return 'четное' if number % 2 == 0 else 'нечетное'
 
 
-def greeting():
-    print('Hello world')
-greeting()
+# def greeting():
+#     print('Hello world')
+# greeting()
+
+print(1 and 1)
