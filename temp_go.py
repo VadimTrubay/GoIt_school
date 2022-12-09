@@ -360,18 +360,21 @@
 # year_of_birth = current_year - user_data
 # print(year_of_birth)
 
+# result = 0
+# first = 1
+# positions = 25
+#
+# print(f"step 0 = 0")
+# for _ in range(first, positions):
+# 	first, result = result, first + result
+# 	print(f"step {i} = {result}")
+
 result = 0
 first = 1
 positions = 25
-
-print(f"step 0 = 0")
-for i in range(first, positions + 1):
+for _ in range(0, 25):
 	first, result = result, first + result
-	print(f"step {i} = {result}")
-
-
-
-
+print(first, result)
 
 
 
