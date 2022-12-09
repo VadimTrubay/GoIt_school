@@ -318,16 +318,56 @@
 #         break
 # print('end')
 
+# def google(number):
+#     for i in range(number):
+#         number -= 1
+#         print(f"G{'o' * number}gle")
+# google(3)
 
-def google(number):
+# start = int(input('enter start>: '))
+# stop = int(input('enter stop>: '))
+# for i in range(start, stop + 1):
+#     print(i, end=', ')
 
-    for i in range(number):
-        number -= 1
-        print(f"G{'o' * number}gle")
+# def new_word(word):
+# 	return word[::-1], word[1::]
+# print(new_word('apple'))
 
+# try:
+# 	while True:
+# 		print('end')
+# 		int('asd')
+# except KeyboardInterrupt or TypeError:
+# 	print('wtf')
+# except ValueError as error:
+# 	print(error)
 
-google(10)
+# try:
+# 	int('asd')
+# except (ValueError, TypeError, OverflowError):
+# 	print('wtf')
+# except:
+# 	print('wtf!!!!!')
 
+# while True:
+# 	try:
+# 		user_data = int(input('enter your old>: '))
+# 	except ValueError as error:
+# 		print(f'incorrect input, chould be {error}')
+# 	else:
+# 		break
+# current_year = 2022
+# year_of_birth = current_year - user_data
+# print(year_of_birth)
+
+result = 0
+first = 1
+positions = 25
+
+print(f"step 0 = 0")
+for i in range(first, positions + 1):
+	first, result = result, first + result
+	print(f"step {i} = {result}")
 
 
 
