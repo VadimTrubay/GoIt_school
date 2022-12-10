@@ -369,12 +369,37 @@
 # 	first, result = result, first + result
 # 	print(f"step {i} = {result}")
 
-result = 0
-first = 1
-positions = 25
-for _ in range(0, 25):
-	first, result = result, first + result
-print(first, result)
+# result = 0
+# first = 1
+# positions = 25
+# for _ in range(0, 25):
+# 	first, result = result, first + result
+# print(first, result)
+
+# while True:
+# 	try:
+# 		a = input('enter the numb>: ')
+# 		int_a = int(a)
+# 		if not int_a % 2:
+# 			print("numb is even")
+# 			continue
+# 		else:
+# 			print("numb is odd")
+# 			continue
+# 	except ValueError:
+# 			print(f"{a} is not number")
+
+# def NOT(num):
+# 	return 1 if not num else 0
+# print(NOT(0))
+
+# def AND(num, num2):
+# 	return 1 if num and num2 else 0
+# print(AND(0, 0))
+#
+# def OR(num, num2):
+#     return 1 if num or num2 else 0
+# print(OR(0, 1))
 
 
 
