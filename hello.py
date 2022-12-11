@@ -6,6 +6,7 @@ def get_name():
 def greeting(name):
     print(f'Hello {name}')
 
+
 def main():
     name = get_name()
     greeting(name)
