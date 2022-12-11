@@ -401,6 +401,87 @@
 #     return 1 if num or num2 else 0
 # print(OR(0, 1))
 
+# def distance_home(my_list):
+#     return abs(sum(my_list))
+# print(distance_home([-1, -4, -3, -2]))
+
+# def should_serve_drinks(age, on_break):
+#     return True if age >= 18 and not on_break else False
+# print(should_serve_drinks(3, False))
+
+# def flip(y):
+# 	return 0 if y == 1 else 1
+
+# def how_many_stickers(n):
+#     return (n ** 2) * 6
+# print(how_many_stickers(4))
+
+# def inches_to_feet(inches):
+#     return inches / 12 if inches >= 12 else 0
+
+# def max_num(a, b):
+#     if a > b:
+#         print(f'max = a = {a}')
+#     elif a < b:
+#         print(f'max = b = {b}')
+#     else:
+#         print('a = b')
+# max_num(3, 2)
+
+# def total(a=5, *numbers, **phone_book):
+#     print('a', a)
+#     for i in numbers:
+#         print('single_item', i)
+#     for key, value in phone_book.items():
+#         print(key, value)
+# print(total(10, '11', '12', 1, 2, 3, 4, Jack=1123, John=2231, Inge=1560))
+
+# def total(*tuples_1, **tuples_2):
+#     print(tuples_1, tuples_2)
+#     for it in tuples_1:
+#         print(it)
+# total(1, 2, 3, vad = 12, vadd = 23, vsub = 24 )
+
+# my_tuple = tuple()
+# another_tuple = ()
+#
+# empty_dict = {}
+# another_empty_dict = dict()
+#
+# some_dict = {
+#     "key": "value",
+#     1: "one",
+# }
+
+# not_empty = {"key": "value"}
+# not_empty["new_key"] = "new value"
+# not_empty['1'] = '2'
+# print(not_empty)
+
+# def factorial(n):
+#     if n <= 1:
+#         return 1
+#     else:
+#         print(n)
+#         return n * factorial(n - 1)
+#
+# print(factorial(5))
+
+# import math
+# sin_pi = math.sin(math.pi)
+# print(sin_pi)
+
+# from math import sin, pi
+# sin_pi = sin(pi)
+# print(sin_pi)
+
+
+
+
+
+
+
+
 
 
 
