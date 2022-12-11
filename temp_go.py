@@ -475,18 +475,34 @@
 # sin_pi = sin(pi)
 # print(sin_pi)
 
+# def is_safe_bridge(s):
+#     space = 0
+#     for symbol in s:
+#         if symbol.isspace():
+#             space += 1
+#     if space != 0:
+#         return False
+#     else:
+#         return True
+# print(is_safe_bridge('# ####'))
+
+# def has_key(dictionary, key):
+#     return True if key in dictionary else False
+#
+# print(has_key({"ночной": True, "дожор": True}, "дозор"))
+# print(has_key({"кот": 1, "коt": "код", "рот": 3}, "код"))
+
+# def how_many_potatoes(some_string):
+#     a = some_string.split()
+#     print(a)
+#     b = 0
+#     for i in range(len(a)):
+#         if a[i] == 'картошка' or a[i] == 'картошка,':
+#             b += 1
+#     return b
 
 
-
-
-
-
-
-
-
-
-
-
+print(how_many_potatoes("лук, картошка, капуста, картошка, картошка"))
 
 
 
