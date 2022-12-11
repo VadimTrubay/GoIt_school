@@ -500,16 +500,28 @@
 #         if a[i] == 'картошка' or a[i] == 'картошка,':
 #             b += 1
 #     return b
+# print(how_many_potatoes("лук, картошка, капуста, картошка, картошка"))
 
+# def is_empty(dictionary):
+#     return True if len(dictionary) == 0 else False
+# print(is_empty({}))  # True
+# print(is_empty({"a": 1}) ) # False
 
-print(how_many_potatoes("лук, картошка, капуста, картошка, картошка"))
+# def match(s1, s2):
+#     s1 = s1.lower()
+#     s2 = s2.lower()
+#     return True if s1 == s2 else False
+#
+# print(match("привет", "прИВеТ")) # True
+# print(match("кот", "код")) # False
 
-
-
-
-
-
-
+# def last_ind(lst):
+#     return lst[-1] if lst else None
+#
+#
+# print(last_ind([0, 4, 19, 34, 50, -9, 2])) # 2
+# print(last_ind("Серая лисичка перепрыгнула ленивую собаку")) # "у"
+# print(last_ind([])) # None
 
 
 
