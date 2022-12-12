@@ -1,1 +1,1 @@
-# GoIt_school
+# GoIT_school
