@@ -428,19 +428,21 @@
 #         print('a = b')
 # max_num(3, 2)
 
-# def total(a=5, *numbers, **phone_book):
-#     print('a', a)
-#     for i in numbers:
-#         print('single_item', i)
-#     for key, value in phone_book.items():
+# def total(*args):
+#     for i in args:
+#         print(i)
+# print(total(10, 1, 2, 3, 4))
+#
+# def totall(**kwargs):
+#     for key, value in kwargs.items():
 #         print(key, value)
-# print(total(10, '11', '12', 1, 2, 3, 4, Jack=1123, John=2231, Inge=1560))
+# print(totall(Jack=1123, John=2231, Inge=1560))
 
 # def total(*tuples_1, **tuples_2):
 #     print(tuples_1, tuples_2)
 #     for it in tuples_1:
 #         print(it)
-# total(1, 2, 3, vad = 12, vadd = 23, vsub = 24 )
+# total(1, 2, 3, vad = 12, add = 23, vsub = 24 )
 
 # my_tuple = tuple()
 # another_tuple = ()
@@ -522,6 +524,58 @@
 # print(last_ind([0, 4, 19, 34, 50, -9, 2])) # 2
 # print(last_ind("Серая лисичка перепрыгнула ленивую собаку")) # "у"
 # print(last_ind([])) # None
+
+# string = 'agsa'
+# if string == string[:: -1]:
+#     print('yes')
+# else:
+#     print('no')
+
+# import random
+# help(random)
+
+# base_rate = 40
+# price_per_km = 10
+# total_trip = 0
+# def trip_price(path):
+#     global total_trip
+#     total_trip += 1
+#     total = base_rate + price_per_km * path
+#     return float(total)
+# trip_price(11)
+# print(total_trip)
+
+# def discount_price(price, discount):
+#     price = int(price)
+#     discount = float(discount)
+#     def apply_discount():
+#         nonlocal price
+#         price = price - (price * discount)
+#     apply_discount()
+#     return price
+# print(discount_price(200, 0.07))
+
+# def get_fullname(first_name, last_name, middle_name = None):
+#     if first_name and middle_name and last_name:
+#         return f'{first_name} {middle_name} {last_name}'
+#     elif first_name and last_name:
+#         return f'{first_name} {last_name}'
+# print(get_fullname('vad', 'trub', 'valent'))
+
+# def format_string(string, length):
+#     if len(string) >= length:
+#         return string
+#     elif len(string) < length:
+#         space = (length - len(string)) // 2
+#         print(space)
+#         string = ' ' * space + string
+#         return  string
+#         print(string)
+# print(format_string(length=15, string='abaa'))
+
+
+
+
 
 
 
