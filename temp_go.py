@@ -573,17 +573,55 @@
 #         print(string)
 # print(format_string(length=15, string='abaa'))
 
+# def first(size, *poz_1):
+#     return size + len(poz_1)
+# def second(size, **poz_2):
+#     return size + len(poz_2)
+# first(5, "first", "second", "third")
+# first(1, "Alex", "Boris")
+# second(3, comment_one="first", comment_two="second", comment_third="third")
+# second(10, comment_one="Alex", comment_two="Boris")
 
 
+# def cost_delivery(quantity, *_, discount=0):
+#     result = (5 + 2 * (quantity - 1)) * (1 - discount)  # решение с сайта
+#     fin_sum =  (5 + 2 *(quantity - 1))  # мое решение
+#     fin_sum = fin_sum - (fin_sum * discount)
+#     return fin_sum
+# print(cost_delivery(2, 1, 2, 3)) #== 7
+# print(cost_delivery(3, 3)) #== 9)
+# print(cost_delivery(1)) #== 5
+# print(cost_delivery(2, 1, 2, 3, discount=0.5)) #== 3.5
 
+# def factorial(a):
+#     if a < 2:
+#         return 1
+#     else:
+#         return a * factorial(a - 1)
+#
+# def number_of_groups(n, k):
+#     res = factorial(n)/ (factorial(n - k) * factorial(k))  #Cnk = n! / ((n - k)! · k!)
+#     return int(res)
+#
+# print(number_of_groups(50, 7))
 
+# def fibonacci(n):
+#     if n == 0:
+#         return 0
+#     elif n in (1, 2):
+#         return 1
+#     return fibonacci(n - 1) + fibonacci(n - 2)
+#
+# print(fibonacci(9))
 
-
-
-
-
-
-
+# def amount_payment(payment):
+#     result = 0
+#     for i in payment:
+#         if i > 0:
+#             result += i
+#     return result
+#
+# print(amount_payment([1, -2, 3, 4, -3, 8, -5, 9, -10, 11]))
 
 
 
