@@ -1,13 +1,14 @@
-from pathlib import Path
+from pathlib import path
 import sys
 
 
 def main():
+    global path
     if len(sys.argv) < 2:
         user_input = ''
     else:
         user_input = sys.argv[1]
-    path = Path(user_input)
+    path = path(user_input)
     if path.exists():
         if path.is_dir():
             items = path.iterdir()

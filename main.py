@@ -10,7 +10,7 @@ def main():
         elif sys.argv[1] == 'goodbye':
             exiting()
         else:
-            print('Unknown command')
+            print(f'Unknown command')
     except IndexError:
         print('argument myst be great or goodbye')
 
