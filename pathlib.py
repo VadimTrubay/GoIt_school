@@ -19,5 +19,6 @@ def main():
     else:
         print(f'{path.absolute()} is not a directory')
 
+
 if __name__ == "__main__":
     main()
