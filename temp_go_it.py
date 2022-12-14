@@ -647,3 +647,18 @@
 # for i in range(0, 5):
 #     list_number.append(int(input(f'Enter number {i + 1} >: ')))
 # print(f'Your list = {list_number}')
+
+# the_board = []
+# for i in range(10):
+#     the_board.append(f'{i+1}')
+# print(the_board)
+
+
+
+
+
+
+
+
+
+
