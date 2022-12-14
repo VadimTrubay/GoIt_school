@@ -1,14 +1,15 @@
-import pathlib
 import sys
+import pathlib
 
 
-def recursive_print(path):
+def recursive_print(path, depth=0, margin_sumbol='-'):
+    margin = margin_sumbol + depth
     if path.is_dir():
-        print(path.name + '/')
+        print(margin + path.name + '/')
         for item in path.iterdir():
-            print(item.name)
+            recursive_print(item, depth=depth+1)
     else:
-        print(path.name)
+        print(margin + path.name)
 
 
 def main():
@@ -16,5 +17,5 @@ def main():
     recursive_print(path)
 
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()

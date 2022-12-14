@@ -623,8 +623,27 @@
 #
 # print(amount_payment([1, -2, 3, 4, -3, 8, -5, 9, -10, 11]))
 
+# a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+#
+# for i in a:
+#     print(str(i))
+# b = list(map(str, a))
 
+# b = ','.join(a)
+# print(b)
 
+# def get_vote_count(votes):
+#     a = []
+#     for _ in votes.values():
+#         result = votes['лайки'] - votes['дизлайки']
+#         return result
+# print(get_vote_count({"лайки": 2, "дизлайки": 5}))
 
+# def calc_kinetic_energy(m, v):
+#     return round(0.5 * m * v ** 2)
+# print(calc_kinetic_energy(63.5, 7.35))
 
-
+# list_number = []
+# for i in range(0, 5):
+#     list_number.append(int(input(f'Enter number {i + 1} >: ')))
+# print(f'Your list = {list_number}')
