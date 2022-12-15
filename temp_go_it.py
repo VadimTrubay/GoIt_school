@@ -659,8 +659,58 @@
 #     return a + b
 # print(get_max_number(4, 2.4))
 
+# def count_true(my_list):
+#     count = 0
+#     for i in my_list:
+#         if i:
+#             count += 1
+#     return count
+# print(count_true([True, False, False, True, False])) # 2
+# print(count_true([False, False, False, False])) # 0
+# print(count_true([])) # 0
 
+# def get_filename(path):
+#     for i in path:
+#         a = path.rfind('/')
+#         return path[a+1::]
+# def get_filename(path):
+#     return path.split('/')
+#
+# print(get_filename('C:/Windows/system32/secret/php_tutorials.avi'))
+# print(get_filename('virus.exe'))
 
+''''' TODO: remove dfbfdfb'''''
+# def count_syllables(string):
+#     string = string.lower()
+#     string_mini = string[:2:]
+#
+#     return len(string.split(string_mini)) - 1
+# def count_syllables(string):
+#     return len(string)//2
+#
+# print(count_syllables("Hehehehehehe"))
 
+# import string
+# string.punctuation()
 
+# n = [[1, 2, 3],
+#      [4, 5, 6],
+#      [7, 8, 9]
+#      ]
+# for i in range(len(n)):
+#     a, *args, b = n[i]
+#     print(a, b)
 
+# n = [1, 2, 3, 4, 5, 6]
+# a, *args, b = n
+# print(a, b)
+
+# a = [1, 2, 3, 4, 5, 6]
+# print(*a, sep='/')
+
+# n = [[1, 2, 3],
+#      [1, 5, 6],
+#      [7, 8, 9]
+#      ]
+# print(n[0][0] == n[1][0])
+# print(n[0][0] is n[1][1])
