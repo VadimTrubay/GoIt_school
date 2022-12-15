@@ -3,7 +3,6 @@ import sys
 
 
 def main():
-    global path
     if len(sys.argv) < 2:
         user_input = ''
     else:
@@ -17,7 +16,10 @@ def main():
         else:
             print(f'{path} is a file')
     else:
-        print(f'{path.absolute()} is not a directory')
+        print(f'{path.absolute()} is a not exists')
+
+
+
 
 
 if __name__ == "__main__":

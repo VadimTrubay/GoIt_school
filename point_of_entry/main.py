@@ -1,18 +1,18 @@
 import sys
-from hello import main as greeting
-from bye import main as exiting
+from hello import main as greet
+from bye import main as exitt
 
 
 def main():
     try:
         if sys.argv[1] == 'greet':
-            greeting()
-        elif sys.argv[1] == 'goodbye':
-            exiting()
+            greet()
+        elif sys.argv[1] == 'bye':
+            exitt()
         else:
-            print(f'Unknown command')
+            print('Unknown command')
     except IndexError:
-        print('argument myst be great or goodbye')
+        print('argument myst be great or bye')
 
 
 if __name__ == '__main__':

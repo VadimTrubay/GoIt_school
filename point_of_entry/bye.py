@@ -1,13 +1,13 @@
 from hello import get_name
 
 
-def goodbye(name):
-    print(f'goodbye {name}')
+def bye(name):
+    print(f'bye {name}')
 
 
 def main():
     name = get_name()
-    goodbye(name)
+    bye(name)
 
 
 if __name__ == '__main__':
