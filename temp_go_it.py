@@ -653,9 +653,11 @@
 #     the_board.append(f'{i+1}')
 # print(the_board)
 
-
-
-
+# def get_max_number(a: int, b: int) -> list[int | int]:
+#     if not isinstance(a, int) or not isinstance(b, int):  # анотации типов данных
+#         raise ValueError('a and b must be integers')
+#     return a + b
+# print(get_max_number(4, 2.4))
 
 
 
