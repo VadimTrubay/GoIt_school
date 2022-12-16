@@ -714,3 +714,92 @@
 #      ]
 # print(n[0][0] == n[1][0])
 # print(n[0][0] is n[1][1])
+
+# numbers = {
+#     "1": "one",
+#     2: "two",
+#     3: "three"
+# }
+# for key in numbers.keys():
+# for value in numbers.values():
+# for key, value in numbers.items():
+#     print(type(key), key, type(value), value)
+
+# a = set('hello')
+# b = set('world')
+# print(a and b, a ^ b)
+
+# points = {
+#     (0, 0): "O",
+#     (1, 1): "A",
+#     (2, 2): "B"
+# }
+# for i, j in points.items():
+#     print(i, j)
+#
+# a = (1, )
+
+# user = {
+#     "name": "Bill",
+#     "surname": "Bosh",
+#     "age": 22
+# }
+#
+# if "age" in user:
+#     print(f"User is {user['age']} years old.")
+
+
+# password = input("Password: ")
+# if len(password) < 8:
+#     print("Your password is too short")
+
+# alphabet = "abcdefghijklmnopqrstuvwxyz"
+# for char in alphabet:
+#     print(char)
+
+# from pathlib import Path
+# p = Path('/home/user/Downloads')
+# print(p)
+#
+# from pathlib import Path
+# p = Path()  # p # Указывает на папку из которой был запущен Python
+
+# p.parent указывает на родительскую папку;
+# p.name возвращает только имя (строкой) папки или файла, на который указывает p;
+# p.suffix возвращает строкой расширение файла, на который указывает p, начиная с точки;
+# p = Path('setup.py')
+# p.suffix    # '.py'
+# p.exists() возвращает True или False, в зависимости от того, существует ли такой файл или папка;
+# p.is_dir() возвращает True, если p указывает на папку, и False, если на файл, или такой путь не существует;
+# p.is_file() возвращает True, если p указывает на файл, и False, если на папку, или такой путь не существует;
+# p.iterdir() возвращает итератор по всем файлам и папкам внутри папки p;
+# from pathlib import Path
+# p = Path('/home/user/Downloads')    # p Указывает на папку /home/user/Downloads
+# for i in p.iterdir():
+#     print(i.name)   # Выведет в цикле имена всех папок и файлов в /home
+
+# import sys
+# for arg in sys.argv:
+#     print(arg)
+# python echo.py test --user -hello some text
+#
+# import sys
+# def main():
+#     print(sys.argv[1])
+
+# a = [5, 3, 4, 6, 7, 9]
+# b = a.sort()
+# print(a)
+# c = sorted(a)
+# print(c)
+
+# help(list)
+
+a = {'a': 1,
+     'b': 2,
+     'c': 3
+     }
+print(a.keys())
+print(a.values())
+print(a.items())
+
