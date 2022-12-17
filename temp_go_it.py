@@ -795,11 +795,89 @@
 
 # help(list)
 
-a = {'a': 1,
-     'b': 2,
-     'c': 3
-     }
-print(a.keys())
-print(a.values())
-print(a.items())
+# a = {'a': 1,
+#      'b': 2,
+#      'c': 3
+#      }
+# print(a.keys())
+# print(a.values())
+# print(a.items())
 
+# a = [1, 4, 5, 6, 9, 2, 3]
+# def prepare_data(data):
+#     data.sort()
+#     return data[1:-1]
+# print(prepare_data(a))
+
+# def format_ingredients(items):
+#     if len(items) > 1:
+#         a = items.pop()
+#         a = ' and ' + a
+#         b = ', '.join(items) + a
+#         return b
+#     else:
+#         return ''.join(items)
+#
+# print(format_ingredients(["2 eggs", "1 liter sugar", "1 tsp salt", "vinegar"]))
+
+# a = 2
+# b = 3
+# print(hex(id(a)))
+# print(hex(id(b)))
+# a, b = b, a
+#
+# print(hex(id(a)))
+# print(hex(id(b)))
+
+# import sys
+# a = 'hello world'
+# b = a
+# print(sys.getrefcount(True))
+
+# x = 3
+# y = 3
+# a = []
+# for i in range(x):
+#     b = []
+#     for j in range(y):
+#         number = int(input(f'enter number {i}, {j}: '))
+#         b.append(number)
+#     a.append(b)
+# print(a)
+
+# def nothing_is_nothing(*args):
+#     for i in args:
+#         if not i:
+#             break
+#             return False
+#         else:
+#             return True
+# print(nothing_is_nothing(1, True, [], {}))
+
+# list_1 = ['Hello', 'world', 'Petya']
+# for value in list_1:
+#     print(value)
+#
+# for value in range(len(list_1)):
+#     print(list_1[value])
+# for index, value in enumerate(list_1):
+#     print(index, value)
+
+# a = [[i+1 for i in range(3)]] * 3
+# a = [[i for i in range(3)] for j in range(3)]
+# print(a)
+# a = ''.join([i for i in "hello 123 wol456g" if i.isdigit()])
+# a = ''.join([i for i in "hello 123 wol456g" if i.islower()])
+# print(a)
+
+# typle = (1,)
+# typle1 = 1, 2, 4
+# print(type(typle), type(typle1))
+
+# import sys
+# l = [1, 2, 3, 4, 5, 6]
+# t = (1, 2, 4, 4, 4, 6)
+# a = t.count(4)
+# print(a)
+# print(sys.getsizeof(l))
+# print(sys.getsizeof(t))
