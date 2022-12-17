@@ -846,13 +846,12 @@
 # print(a)
 
 # def nothing_is_nothing(*args):
-#     for i in args:
-#         if not i:
-#             break
-#             return False
-#         else:
-#             return True
-# print(nothing_is_nothing(1, True, [], {}))
+#     return all(args)
+    # for i in args:
+    #     if not i:
+    #         return False
+    # return True
+# print(nothing_is_nothing(0, False, [], {}))
 
 # list_1 = ['Hello', 'world', 'Petya']
 # for value in list_1:
@@ -902,3 +901,29 @@
 #      'A': 'Perfectly'}
 # def get_description(key):
 #     return b.get(key)
+
+# def reverse_case(string):
+#     return string.swapcase()
+#
+# print(reverse_case('Hello dfgFE'))
+
+# num_words = {1: 'один', 2: 'два', 3: 'три', 4: 'четыре', 5: 'пять',
+#              6: 'шесть', 7: 'семь', 8: 'восемь', 9: 'девять',  0: 'ноль'}
+#
+# def convert_number_2_word(number):
+#     return num_words.get(number)
+#
+# print(convert_number_2_word(8))
+
+# def get_case(string):
+#     if string.isupper():
+#         return 'верхний'
+#     elif string.islower():
+#         return 'нижний'
+#     else:
+#         return 'смешанный'
+#
+# print(get_case('LKHOIH'))
+#
+# def is_truthy(val):
+#     return 1 if val else 0
