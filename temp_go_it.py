@@ -929,4 +929,53 @@
 #     return 1 if val else 0
 
 
-print()
+# def lookup_key(data, value):
+#     a = []
+#     for k, v in data.items():
+#         if v == value:
+#             a.append(k)
+#     return a
+# print(lookup_key({'key1': 1, 'key2': 2, 'key3': 3, 'key4': 2}, 2))
+
+# def calculate_scores(string):
+#     A, B, C = 0, 0, 0
+#     for i in string:
+#         if i == 'А':
+#             A += 1
+#         elif i == 'Б':
+#             B += 1
+#         elif i == 'В':
+#             C += 1
+#     a = [A, B, C]
+#     return a
+#
+# def calculate_scores(string):
+# 	return [string.count(x) for x in 'АБВ']
+#
+# print(calculate_scores("АБВБАВВ")) # [2, 2, 3]
+
+# def reverse_capitalize(txt):
+#     if txt.islower():
+#         return txt[::-1].upper()
+#     else:
+#         return txt[::-1].lower()
+# print(reverse_capitalize("ghdth"))
+
+# def sort_word(word):
+#     word = list(word)
+#     word.sort()
+#     word = ''.join(word)
+#     return word
+#   or  return ''.join(sorted(word))
+# print(sort_word("Unpredictable"))
+
+# def increment_items(my_list):
+#     a = []
+#     for i in my_list:
+#         i += 1
+#         a.append(i)
+#         my_list = a
+#     return a
+def increment_items(lst):
+    return [i+1 for i in lst]
+print(increment_items([0, 1, 2, 3]))
