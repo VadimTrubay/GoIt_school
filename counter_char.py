@@ -1,6 +1,9 @@
-def counter_char(string):
+def counter_char(text):
+    """
+    Функция считает количество вхождений символа в строке
+    """
     dict_counter = {}
-    for char in string:
+    for char in text:
         # try:
         #     count = dict_counter[char]  # получаем значение по ключу
         # except KeyError:

@@ -91,28 +91,24 @@
 # import sys
 # print(sys.argv)
 
-# word_map = []
-# def print_map(word_map):
-#     for row in word_map:
-#         print(f'|{"|".join(row)}')
-# word_map()
-
-# from string import *
-# alphabet = ascii_lowercase
-# text = 'Lorem ipsum dolor sit amet ' \
-#        'consectetur adipiscing elit ' \
-#        'sed do eiusmod'
-# words = []
-# start = 0
-# for index, char in enumerate(text):
-#     if not char.lower() in alphabet:
-#         word = text[start:index]
-#         words.append(word.strip())
-#         start = index
-# print(words)
 
 from counter_char import *
 text = 'Lorem ipsum dolor sit amet ' \
        'consectetur adipiscing elit ' \
        'sed do eiusmod'
 counter_char(text)
+
+from char_set import *
+text = 'Quis autem vel eum iure reprehenderit, ' \
+       'qui in ea \\ voluptate velit esse, ' \
+       'quam nihil molestiae! consequatur, ' \
+       'vel illum, qui dolorem eum fugiat, ' \
+       'quo voluptas nulla pariatur? 33 ' \
+       'At vero eos et accusamus et'
+char_set(text)
+
+from cast_split import *
+text = 'Lorem ipsum, dolor sit amet ' \
+       'consectetur adipiscing elit ' \
+       'sed do eiusmod!!!'
+cast_split(text)
