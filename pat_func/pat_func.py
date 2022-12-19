@@ -17,7 +17,3 @@ def main():
                     margin=0,
                     margin_item='-')
     # print(file_name.absolute())
-
-
-if __name__ == '__main__':
-    main()
