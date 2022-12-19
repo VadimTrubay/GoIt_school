@@ -976,6 +976,6 @@
 #         a.append(i)
 #         my_list = a
 #     return a
-def increment_items(lst):
-    return [i+1 for i in lst]
-print(increment_items([0, 1, 2, 3]))
+# def increment_items(lst):
+#     return [i+1 for i in lst]
+# print(increment_items([0, 1, 2, 3]))
