@@ -295,3 +295,72 @@
 
 # import sys
 # print(sys.argv)
+
+# import re
+#
+# s = "I am 3456 years old"
+# age = re.search('\d+', s)
+# print(age.group())
+
+# a = ['\n', '\f', '\r', '\t', '\v']
+#
+# def real_len(text):
+#     string = ''
+#     for i in text:
+#         if i in a:
+#             continue
+#         string += i
+#
+#     return len(string)
+#
+# print(real_len('Alex\nKdfe23\t\f\v.\r'))
+
+# width = 5
+# for num in range(12):
+#     print('{:^10} {:^10} {:^10}'.format(num, num**2, num**3))
+
+# jingle_bells = "Jingle bells, jingle bells\nJingle all the way\rOh, what fun it is to ride\v In a one horse open sleigh"
+# print(jingle_bells)
+
+import re
+# text = 'I bought 7 nuts for 6$ and 10 bolts for 3$.'
+# a = re.search('\d+', text)
+# print(a.group())
+#
+# b = re.findall('\d+', text)
+# print(b)
+
+# с = re.('\b\w{3}\b', text)
+# print(с)
+
+# match = re.findall(r'\d\d\D\d\d\D\d\d', r'Телефон 23-12-12')
+# print(match)
+
+# 096-567-86-67
+# inp = input('enter tel: +38')
+# pattern = re.search('^\(0?\d{2}\)?\d{3}-?\d{2}-?\d{2}$', inp)
+# # print(pattern)
+# try:
+#     if inp == pattern.group():
+#         print('OK! access allowed')
+#     else:
+#         print('STOP! access denied')
+# except AttributeError:
+#     print('STOP! access denied')
+
+# inp = input('enter email: ')
+# pattern = re.search('^\w+[@]\w+[.]\w{2,3}$', inp)
+# # print(pattern)
+# try:
+#     if inp == pattern.group():
+#         print('OK! access allowed')
+#     else:
+#         print('STOP! access denied')
+# except AttributeError:
+#     print('STOP! access denied')
+
+logs = '''fdgdgr145.34.56.67fdhfg34.34.56.67fdxn211.35.768.78ghn'''
+# 0.0.0.0
+# 255.255.255.255
+
+ip_address = re.findall('^\d{2,3}[.]\d{2,3}[.]\d{2,3}[.]\d{2,3}$',)
