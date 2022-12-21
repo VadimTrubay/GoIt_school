@@ -251,10 +251,10 @@
 #             continue
 #
 # print(get_password())
-from pathlib import Path
+# from pathlib import Path
 # print(Path())
 # my_path = Path('D:\\work_it\\Github\\GoIt_school\\temp_go_it_1.py')
-my_path = Path('D:\work_it\Github')
+# my_path = Path('D:\work_it\Github')
 # my_path = my_path.parent
 # my_path = my_path.name
 # my_path = my_path.suffix
