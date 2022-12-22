@@ -466,59 +466,67 @@
 #         else:
 #             print('Try again ...')
 
-files = ['video.avi', 'audio.mp3', 'document.html', 'folder']
-for file in files:
-    index = file.find('.')
-    if index != -1:
-        sufix = file[index+1:]
-        print(f'File: ({file}), sufix: ({sufix})')
-    else:
-        print(f'File: {file}, sufix: not found')
+# TODO поиск расширения файла
+# files = ['video.avi', 'audio.mp3', 'document.html', 'folder', 'backup.tar.gz']
+# for file in files:
+#     try:
+#         index = file.rindex('.')
+#         sufix = file[index+1:]
+#         print(f'File: ({file}), sufix: ({sufix})')
+#     except ValueError:
+#         print(f'File: ({file}), sufix: (not found)')
+
+# import re
+# text = 'first sentence, second sentence. ' \
+#        'third sentence! fourth sentence?'
+# sentences = re.split('[\.\,\!\?]', text)
+# print(sentences)
 
 
+# text = 'first sentence\n second sentence\n ' \
+#        'third sentence'
+# print(text)
+# sentences = text.split('\n')
+# new_text = '*'.join(sentences)
+# print(sentences)
+# print(new_text)
+
+articles_dict = [
+    {
+        "title": "Endless ocean waters.",
+        "author": "Jhon Stark",
+        "year": 2019,
+    },
+    {
+        "title": "Oceans of other planets are full of silver",
+        "author": "Artur Clark",
+        "year": 2020,
+    },
+    {
+        "title": "An ocean that cannot be crossed.",
+        "author": "Silver Name",
+        "year": 2021,
+    },
+    {
+        "title": "The ocean that you love.",
+        "author": "Golden Gun",
+        "year": 2021,
+    },
+]
+import pprint
+import re
+def find_articles(key, letter_case=False):
+    new_dict = []
+    for i in articles_dict:
+        for k, v in i.items():
+            if type(v) == str:
+                r = v.split(' ')
+                for j in r:
+                    if j == key.lower() and letter_case is False:
+                        new_dict.append(i)
+                    elif j == key and letter_case is True:
+                        new_dict.append(i)
+    return new_dict
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+pprint.pprint(find_articles('ocean', letter_case=False))
