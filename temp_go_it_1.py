@@ -322,7 +322,7 @@
 # jingle_bells = "Jingle bells, jingle bells\nJingle all the way\rOh, what fun it is to ride\v In a one horse open sleigh"
 # print(jingle_bells)
 
-import re
+# import re
 # text = 'I bought 7 nuts for 6$ and 10 bolts for 3$.'
 # a = re.search('\d+', text)
 # print(a.group())
@@ -359,8 +359,166 @@ import re
 # except AttributeError:
 #     print('STOP! access denied')
 
-logs = '''fdgdgr145.34.56.67fdhfg34.34.56.67fdxn211.35.768.78ghn'''
+# log = 'fdgdgr145.34.56.67fdhfg34.34.56.67fdxn211.35.768.78ghn'
+# logs = 'POSTgdgr145.34.56.67fdhfg7fdxngrggdmalware.comhn'
 # 0.0.0.0
 # 255.255.255.255
 
-ip_address = re.findall('^\d{2,3}[.]\d{2,3}[.]\d{2,3}[.]\d{2,3}$',)
+# ip_address = re.findall('\d{1,3}[.]\d{1,3}[.]\d{1,3}[.]\d{1,3}', log)
+# print(ip_address)
+# ip_addres = re.findall('^POST\w*\d{1,3}[.]\d{1,3}[.]\d{1,3}[.]\d{1,3}\w*malware.com\w*', logs)
+# print(ip_addres)
+# print(re.findall('\d{1,3}[.]\d{1,3}[.]\d{1,3}[.]\d{1,3}', ip_addres[0]))
+
+# logs = '10.01.2023 10:18.43 fddgdgdfgv' \
+#        '10.01.2023 11:18.43 fddgdgdfgv' \
+#        '10.01.2023 12:18.43 fddgdgdfgv' \
+#        '10.01.2023 13:18.43 fddgdgdfgv' \
+#        '10.01.2023 14:18.43 fddgdgdfgv'
+# print(re.findall('\d{2}\.\d{2}.\d{2,4}\s1[10-12]', logs))
+
+# log = 'first_name: fdggfr, last_name: sfvdv, adress: feferg, tel: 437666574'
+# user_input = input('fild name: ')
+# result = re.findall(f'{user_input}:\s\w+\s?', log)
+# print(result)
+
+# user_pattern = '\d{10}'
+# string = '123443567890'
+# def findall(pattern, string):
+#     patterns = {'\d':lambda x: x.isdigit()}
+#     for key in patterns:
+#         if pattern.startswith(key):
+#             pattern_key = key
+#             n_times = int(pattern[pattern.find('{') + 1:pattern.find('}')])
+#     result_string = ''
+#     for char in string:
+#         if patterns[pattern_key](char):
+#             result_string += char
+#         else:
+#             result_string = ''
+#         if len(result_string) == n_times:
+#             return result_string
+#
+# print(findall(user_pattern, string))
+
+# from re import fullmatch
+#
+# LOGIN_RE = '[a-zA-Z0-9._]{3,10}'
+# PWD_RE = '[a-zA-Z0-9._!@#$%&]{8,15}'
+# user_db = {}
+#
+#
+# def check_input(reg_exp, user):
+#     if not fullmatch(reg_exp, user):
+#         raise ValueError(f'Input must be {reg_exp}')
+#     return True
+#
+#
+# def check_if_login_exist(login):
+#     global user_db
+#     return False if login in user_db else True
+#
+#
+# def register():
+#     global user_db, user_pwd, user_login
+#     login_check_result = False
+#     psw_check_result = False
+#
+#     while True:
+#         if not login_check_result:
+#             user_login = input('New login>: ')
+#             login_check_result = check_if_login_exist(user_login)
+#             continue
+#         try:
+#             login_check_result = check_input(LOGIN_RE, user_login)
+#         except ValueError as error:
+#             print(error)
+#
+#         if not psw_check_result:
+#             user_pwd = input('New password>: ')
+#         try:
+#             pwd_check_result = check_input(PWD_RE, user_pwd)
+#         except ValueError as error:
+#             print(error)
+#         return user_login, user_pwd
+#
+#
+# def login():
+#     global user_db
+#
+#     user_login = input('login>: ')
+#     user_pwd = input('password>: ')
+#     try:
+#         return True if user_db[user_login]['pwd'] == user_pwd else False
+#     except KeyError:
+#         return False
+#
+#
+# while True:
+#     action = input('register or login(r or l)?: ')
+#     if action == 'r':
+#         user_login, user_pwd = register()
+#         user_db[user_login] = {'psw': user_pwd}
+#         print(user_db)
+#     elif action == 'l':
+#         if login():
+#             print('Welcome')
+#         else:
+#             print('Try again ...')
+
+files = ['video.avi', 'audio.mp3', 'document.html', 'folder']
+for file in files:
+    index = file.find('.')
+    if index != -1:
+        sufix = file[index+1:]
+        print(f'File: ({file}), sufix: ({sufix})')
+    else:
+        print(f'File: {file}, sufix: not found')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
