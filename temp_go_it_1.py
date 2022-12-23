@@ -491,42 +491,86 @@
 # print(sentences)
 # print(new_text)
 
-articles_dict = [
-    {
-        "title": "Endless ocean waters.",
-        "author": "Jhon Stark",
-        "year": 2019,
-    },
-    {
-        "title": "Oceans of other planets are full of silver",
-        "author": "Artur Clark",
-        "year": 2020,
-    },
-    {
-        "title": "An ocean that cannot be crossed.",
-        "author": "Silver Name",
-        "year": 2021,
-    },
-    {
-        "title": "The ocean that you love.",
-        "author": "Golden Gun",
-        "year": 2021,
-    },
-]
-import pprint
-import re
-def find_articles(key, letter_case=False):
-    new_dict = []
-    for i in articles_dict:
-        for k, v in i.items():
-            if type(v) == str:
-                r = v.split(' ')
-                for j in r:
-                    if j == key.lower() and letter_case is False:
-                        new_dict.append(i)
-                    elif j == key and letter_case is True:
-                        new_dict.append(i)
-    return new_dict
+# import pprint
+# articles_dict = [
+#     {
+#         "title": "Endless ocean waters.",
+#         "author": "Jhon Stark",
+#         "year": 2019,
+#     },
+#     {
+#         "title": "Oceans of other planets are full of silver",
+#         "author": "Artur Clark",
+#         "year": 2020,
+#     },
+#     {
+#         "title": "An ocean that cannot be crossed.",
+#         "author": "Silver Name",
+#         "year": 2021,
+#     },
+#     {
+#         "title": "The ocean that you love.",
+#         "author": "Golden Gun",
+#         "year": 2021,
+#     },
+# ]
+#
+# def find_articles(key, letter_case=False):
+#     new_dict = []
+#     for i in articles_dict:
+#         for k, v in i.items():
+#             if type(v) == str:
+#                 r = v.split(' ')
+#                 for j in r:
+#                     if key.lower() in j.lower() and letter_case is False:
+#                         new_dict.append(i)
+#                         break
+#                     if key in j and letter_case is True:
+#                         new_dict.append(i)
+#                         break
+#     return new_dict
+#
+# pprint.pprint(find_articles('stark', letter_case=False))
 
 
-pprint.pprint(find_articles('ocean', letter_case=False))
+# def sanitize_phone_number(phone):
+#     new_phone = (
+#         phone.strip()
+#         .removeprefix("+")
+#         .replace("(", "")
+#         .replace(")", "")
+#         .replace("-", "")
+#         .replace(" ", "")
+#     )
+#     return new_phone
+#
+#
+# def get_phone_numbers_for_countries(list_phones):
+#     return_phones = {
+#         'UA': [],
+#         'JP': [],
+#         'TW': [],
+#         'SG': []
+#     }
+#     for i in list_phones:
+#         b = sanitize_phone_number(i)
+#         if b.startswith('81'):
+#             return_phones['JP'].append(b)
+#             continue
+#         elif b.startswith('65'):
+#             return_phones['SG'].append(b)
+#             continue
+#         elif b.startswith('886'):
+#             return_phones['TW'].append(b)
+#             continue
+#         elif b.startswith('380'):
+#             return_phones['UA'].append(b)
+#             continue
+#         else:
+#             return_phones['UA'].append(b)
+#     return return_phones
+#
+# print(get_phone_numbers_for_countries(['065-875-94-11', '(81)8765347', '8867658976', '657658976', '(65)765-89-77']))
+#{'UA': ['0658759411'], 'JP': ['818765347'], 'TW': ['8867658976'], 'SG': ['657658976', '657658977']}
+
+def is_spam_words(text, spam_words, space_around=False):
