@@ -573,4 +573,69 @@
 # print(get_phone_numbers_for_countries(['065-875-94-11', '(81)8765347', '8867658976', '657658976', '(65)765-89-77']))
 #{'UA': ['0658759411'], 'JP': ['818765347'], 'TW': ['8867658976'], 'SG': ['657658976', '657658977']}
 
-def is_spam_words(text, spam_words, space_around=False):
+# def is_spam_words(text, spam_words, space_around=False):
+#     if space_around is True:
+#         for i in text.lower().split():
+#             for j in spam_words:
+#                 if j + '.' == i:
+#                     return True
+#         return False
+#
+#     if space_around is False:
+#         for i in text.lower().split():
+#             for j in spam_words:
+#                 if j in i:
+#                     return True
+#         return False
+#
+# print(is_spam_words('Ты хорош, но выглядишь как лох.', ['лох'], True))  # True))
+
+# spam_words = ['ло.']  # j
+# text = 'Мо ло. х'  # i
+# space_around = True
+
+
+# CYRILLIC_SYMBOLS = "абвгдеёжзийклмнопрстуфхцчшщъыьэюяєіїґ"
+# TRANSLATION = ("a", "b", "v", "g", "d", "e", "e", "j", "z", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "u",
+#                "f", "h", "ts", "ch", "sh", "sch", "", "y", "", "e", "yu", "ya", "je", "i", "ji", "g")
+# TRANS = {}
+#
+# for c, l in zip(CYRILLIC_SYMBOLS, TRANSLATION):
+#     TRANS[ord(c)] = l
+#     TRANS[ord(c.upper())] = l.upper()
+#
+# def translate(name):
+#     new_char = name.translate(TRANS)
+#     return new_char
+#
+# print(translate('Вадим Валентиович'))
+
+
+# students = {"Nick": "A", "Olga": "B", "Mike": "FX", "Anna": "C"}
+# grades = {"A": 5, "B": 5, "C": 4, "D": 3, "E": 3, "FX": 2, "F": 1}
+# def formatted_grades(students):
+#     a = 0
+#     d = []
+#     for k, v in students.items():
+#         a += 1
+#         for key, val in grades.items():
+#             if v == key:
+#                 d.append("{:>4}|{:<10}|{:^5}|{:^5}".format(a, k, v, val))
+#     return d
+# for el in formatted_grades(students):
+#     print(el)
+
+# def formatted_numbers():
+#     a = ["|{0:^10}|{1:^10}|{2:^10}|".format('decimal', 'hex', 'binary')]
+#     for i in range(16):
+#         s = "|{0:<10d}|{0:^10x}|{0:>10b}|".format(i)
+#         a.append(s)
+#     return a
+#
+# for el in formatted_numbers():
+#     print(el)
+#
+# for i in range(16):
+#     s = "|{0:<10d}|{0:^10x}|{0:>10b}|".format(i)
+#     print(s)
+
