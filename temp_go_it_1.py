@@ -639,3 +639,21 @@
 #     s = "|{0:<10d}|{0:^10x}|{0:>10b}|".format(i)
 #     print(s)
 
+# def free_shipping(order):
+#     sum = 0
+#     for i in order.values():
+#         sum += i
+#         if sum > 50:
+#             return True
+#     return False
+#
+# print(free_shipping({ "Monopoly": 11.99, "Secret Hitler": 35.99, "Bananagrams": 13.99 }))
+
+
+# def get_extension(lst):
+#     a = []
+#     for i in lst:
+#         b = i.find('.')
+#         a.append(i[b+1:])
+#     return a
+# print(get_extension(["проект1.jpg", "проект1.pdf", "проект1.mp3"]))
