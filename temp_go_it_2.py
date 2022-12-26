@@ -83,3 +83,90 @@
 #     print(fin_sum)
 #     return fin_sum
 # cost_delivery(2, 1, 2, 3, discount=0.5)
+
+# import os
+# import time
+#
+# for i in range(10):
+#     print(i)
+#     time.sleep(1)
+#     os.system('cls')
+
+# a = open('wer.txt')
+# # print(a.readline())
+# # print(a.readline())
+# # print(a.readline())
+# import shutil
+#
+# from pathlib import Path
+# from shutil import *
+# Path(r'D:\work_it\GitHub\GoIt_school\vad_dir').mkdir()
+# Path(r'D:\work_it\GitHub\GoIt_school\vad_dir').rmdir()
+
+# p = Path('vad')
+# p.mkdir()  # создание папки
+# shutil.copy(r'D:\work_it\GitHub\GoIt_school\wer.txt',  # копирование файла
+#          r'D:\work_it\GitHub\GoIt_school\vad')
+# shutil.move(r'D:\work_it\GitHub\GoIt_school\wer.txt',  # перенос файла
+#          r'D:\work_it\GitHub')
+
+
+# src = 'path/to/file.txt'
+# dst = 'path/to/dest_dir'
+# shutil.copy(src, dst)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
