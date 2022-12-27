@@ -24,11 +24,12 @@ LOWER_CASE = {'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g',
 
 ascii_letters = ascii_lowercase + ascii_uppercase
 ascii_letters += digits
+list_file = []
 
 
-def normalize():
-    user_input = sys.argv[1]
-    path = Path(user_input)
+def
+
+def normalize(path):
     if path.exists():
         items = path.glob('**/*')  # search all files
         for item in items:
@@ -52,7 +53,7 @@ def normalize():
                         finaly_string_dir += j
                     else:
                         finaly_string_dir += '_'
-                print(finaly_string_dir)
+                list_file.append(finaly_string_dir)
             else:
                 if item.is_file():
                     item = str(item.name)
@@ -77,13 +78,14 @@ def normalize():
                             finaly_string_file += j
                         else:
                             finaly_string_file += '_'
-                    finaly_string_file += full_suffix
-
-                    print(finaly_string_file)
+                    list_file.append(finaly_string_file + full_suffix)
 
 
 def main():
-    normalize()
+    path = Path(sys.argv[1])
+    normalize(path)
+    print(list_file)
+
 
 # poz_symbol = name.rindex('.')
 # suffix = name[poz_symbol + 1:]
