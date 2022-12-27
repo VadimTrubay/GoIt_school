@@ -22,48 +22,51 @@ LOWER_CASE = {'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g',
               'ы': 'y', 'ь': '', 'э': 'e', 'ю': 'yu',
               'я': 'ya'}
 
-
 ascii_letters = ascii_lowercase + ascii_uppercase
 ascii_letters += digits
-#
-#
-# try:
-#     user_input = sys.argv[1]
-#     path = Path(user_input)
-# except IndexError:
-#     print(f'incorrect argument, try again')
-#     exit(4)
-#
-#
-# def main():
-#     sort_dir()
 
 
-# def rename_dir(name):
-#     trans_string = ''
-#     finaly_string = ''
-#     for index, char in enumerate(name):
-#         if char in LOWER_CASE.keys():
-#             char = LOWER_CASE[char]
-#         elif char in UPPER_CASE.keys():
-#             char = UPPER_CASE[char]
-#             if len(name) > index + 1:
-#                 if name[index + 1] not in LOWER_CASE.keys():
-#                     char = char.upper()
-#             else:
-#                 char = char.upper()
-#         trans_string += char
-#     for j in trans_string:
-#         if j in ascii_letters:
-#             finaly_string += j
-#         else:
-#             finaly_string += '_'
-#     return finaly_string
+def main():
+    normalize()
 
+
+def normalize():
+    user_input = sys.argv[1]
+    path = Path(user_input)
+    if path.exists():
+        items = path.glob('**/*')  # search all files
+        for item in items:
+            if path.is_dir():
+                rename_dir(item.name)
+            else:
+                rename_file(item.name)
+
+
+def rename_dir(name):
+    name = str(name)
+    trans_string = ''
+    finaly_string = ''
+    for index, char in enumerate(name):
+        if char in LOWER_CASE.keys():
+            char = LOWER_CASE[char]
+        elif char in UPPER_CASE.keys():
+            char = UPPER_CASE[char]
+            if len(name) > index + 1:
+                if name[index + 1] not in LOWER_CASE.keys():
+                    char = char.upper()
+            else:
+                char = char.upper()
+        trans_string += char
+    for j in trans_string:
+        if j in ascii_letters:
+            finaly_string += j
+        else:
+            finaly_string += '_'
+    print(finaly_string)
 
 
 def rename_file(name):
-
+    name = str(name)
     trans_string = ''
     finaly_string = ''
     poz_symbol = name.rindex('.')
@@ -87,7 +90,7 @@ def rename_file(name):
             finaly_string += '_'
     finaly_string += full_suffix
 
-    return finaly_string
+    print(finaly_string)
 
 
 # poz_symbol = name.rindex('.')
@@ -123,12 +126,5 @@ def rename_file(name):
 #             return_phones['UA'].append(b)
 #     return return_phones
 
-# def sort_dir():
-#     if path.exists:
-#         items = path.glob('**/*')  # search all files
-#         for item in items:
-#             print(item)
-#
-#
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
