@@ -10,7 +10,9 @@ def main():
     path = Path(user_input)
     if path.exists:
         if path.is_dir():
-            items = path.iterdir()
+            # items = path.iterdir()  # search directory
+            # items = path.glob('*.py')  # search patterns
+            items = path.glob('**/*')  # search all files
             for item in items:
                 print(item)
         else:
