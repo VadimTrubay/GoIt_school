@@ -24,67 +24,53 @@ LOWER_CASE = {'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g',
 
 ascii_letters = ascii_lowercase + ascii_uppercase
 ascii_letters += digits
-list_file = []
 
 
-def
+def capitalize(arg):
+    trans_string = ''
+    finaly_string = ''
+    for index, char in enumerate(arg):
+        if char in LOWER_CASE.keys():
+            char = LOWER_CASE[char]
+        elif char in UPPER_CASE.keys():
+            char = UPPER_CASE[char]
+            if len(arg) > index + 1:
+                if arg[index + 1] not in LOWER_CASE.keys():
+                    char = char.upper()
+            else:
+                char = char.upper()
+        trans_string += char
+    for j in trans_string:
+        if j in ascii_letters:
+            finaly_string += j
+        else:
+            finaly_string += '_'
+    return finaly_string
+
 
 def normalize(path):
+    list_file = []
     if path.exists():
         items = path.glob('**/*')  # search all files
         for item in items:
             if item.is_dir():
                 item = str(item.name)
-                trans_string_dir = ''
-                finaly_string_dir = ''
-                for index, char in enumerate(item):
-                    if char in LOWER_CASE.keys():
-                        char = LOWER_CASE[char]
-                    elif char in UPPER_CASE.keys():
-                        char = UPPER_CASE[char]
-                        if len(item) > index + 1:
-                            if item[index + 1] not in LOWER_CASE.keys():
-                                char = char.upper()
-                        else:
-                            char = char.upper()
-                    trans_string_dir += char
-                for j in trans_string_dir:
-                    if j in ascii_letters:
-                        finaly_string_dir += j
-                    else:
-                        finaly_string_dir += '_'
-                list_file.append(finaly_string_dir)
-            else:
-                if item.is_file():
-                    item = str(item.name)
-                    trans_string_file = ''
-                    finaly_string_file = ''
-                    poz_symbol = item.rindex('.')
-                    full_suffix = item[poz_symbol:]
-                    new_name = item[:poz_symbol]
-                    for index, char in enumerate(new_name):
-                        if char in LOWER_CASE.keys():
-                            char = LOWER_CASE[char]
-                        elif char in UPPER_CASE.keys():
-                            char = UPPER_CASE[char]
-                            if len(item) > index + 1:
-                                if item[index + 1] not in LOWER_CASE.keys():
-                                    char = char.upper()
-                            else:
-                                char = char.upper()
-                        trans_string_file += char
-                    for j in trans_string_file:
-                        if j in ascii_letters:
-                            finaly_string_file += j
-                        else:
-                            finaly_string_file += '_'
-                    list_file.append(finaly_string_file + full_suffix)
+                capitalize(item)
+                list_file.append(capitalize(item))
+            elif item.is_file():
+                item = str(item.name)
+                poz_symbol = item.rindex('.')
+                full_suffix = item[poz_symbol:]
+                new_name = item[:poz_symbol]
+                capitalize(new_name)
+                list_file.append(capitalize(new_name) + full_suffix)
+    return list_file
 
 
 def main():
     path = Path(sys.argv[1])
-    normalize(path)
-    print(list_file)
+    print(normalize(path))
+
 
 
 # poz_symbol = name.rindex('.')
