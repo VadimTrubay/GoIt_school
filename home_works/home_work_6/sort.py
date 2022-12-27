@@ -26,72 +26,64 @@ ascii_letters = ascii_lowercase + ascii_uppercase
 ascii_letters += digits
 
 
-def main():
-    normalize()
-
-
 def normalize():
     user_input = sys.argv[1]
     path = Path(user_input)
     if path.exists():
         items = path.glob('**/*')  # search all files
         for item in items:
-            if path.is_dir():
-                rename_dir(item.name)
+            if item.is_dir():
+                item = str(item.name)
+                trans_string_dir = ''
+                finaly_string_dir = ''
+                for index, char in enumerate(item):
+                    if char in LOWER_CASE.keys():
+                        char = LOWER_CASE[char]
+                    elif char in UPPER_CASE.keys():
+                        char = UPPER_CASE[char]
+                        if len(item) > index + 1:
+                            if item[index + 1] not in LOWER_CASE.keys():
+                                char = char.upper()
+                        else:
+                            char = char.upper()
+                    trans_string_dir += char
+                for j in trans_string_dir:
+                    if j in ascii_letters:
+                        finaly_string_dir += j
+                    else:
+                        finaly_string_dir += '_'
+                print(finaly_string_dir)
             else:
-                rename_file(item.name)
+                if item.is_file():
+                    item = str(item.name)
+                    trans_string_file = ''
+                    finaly_string_file = ''
+                    poz_symbol = item.rindex('.')
+                    full_suffix = item[poz_symbol:]
+                    new_name = item[:poz_symbol]
+                    for index, char in enumerate(new_name):
+                        if char in LOWER_CASE.keys():
+                            char = LOWER_CASE[char]
+                        elif char in UPPER_CASE.keys():
+                            char = UPPER_CASE[char]
+                            if len(item) > index + 1:
+                                if item[index + 1] not in LOWER_CASE.keys():
+                                    char = char.upper()
+                            else:
+                                char = char.upper()
+                        trans_string_file += char
+                    for j in trans_string_file:
+                        if j in ascii_letters:
+                            finaly_string_file += j
+                        else:
+                            finaly_string_file += '_'
+                    finaly_string_file += full_suffix
+
+                    print(finaly_string_file)
 
 
-def rename_dir(name):
-    name = str(name)
-    trans_string = ''
-    finaly_string = ''
-    for index, char in enumerate(name):
-        if char in LOWER_CASE.keys():
-            char = LOWER_CASE[char]
-        elif char in UPPER_CASE.keys():
-            char = UPPER_CASE[char]
-            if len(name) > index + 1:
-                if name[index + 1] not in LOWER_CASE.keys():
-                    char = char.upper()
-            else:
-                char = char.upper()
-        trans_string += char
-    for j in trans_string:
-        if j in ascii_letters:
-            finaly_string += j
-        else:
-            finaly_string += '_'
-    print(finaly_string)
-
-
-def rename_file(name):
-    name = str(name)
-    trans_string = ''
-    finaly_string = ''
-    poz_symbol = name.rindex('.')
-    full_suffix = name[poz_symbol:]
-    new_name = name[:poz_symbol]
-    for index, char in enumerate(new_name):
-        if char in LOWER_CASE.keys():
-            char = LOWER_CASE[char]
-        elif char in UPPER_CASE.keys():
-            char = UPPER_CASE[char]
-            if len(name) > index + 1:
-                if name[index + 1] not in LOWER_CASE.keys():
-                    char = char.upper()
-            else:
-                char = char.upper()
-        trans_string += char
-    for j in trans_string:
-        if j in ascii_letters:
-            finaly_string += j
-        else:
-            finaly_string += '_'
-    finaly_string += full_suffix
-
-    print(finaly_string)
-
+def main():
+    normalize()
 
 # poz_symbol = name.rindex('.')
 # suffix = name[poz_symbol + 1:]
