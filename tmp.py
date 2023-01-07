@@ -176,19 +176,77 @@
 #             fh.write(h)
 # save_credentials_users('text.bin',  {'andry': 'uyro18890D', 'steve': 'oppjM13LL9e'})
 
-def get_credentials_users(path):
-    with open(path, 'rb') as fh:
-        a = []
-        while True:
-            line = fh.readline()
-            if not line:
-                break
-            h = line.decode()
-            if '\n' in h:
-                a.append(h[:-1])
-            else:
-                a.append(h)
-    return a
+# def get_credentials_users(path):
+#     with open(path, 'rb') as fh:
+#         a = []
+#         while True:
+#             line = fh.readline()
+#             if not line:
+#                 break
+#             h = line.decode()
+#             if '\n' in h:
+#                 a.append(h[:-1])
+#             else:
+#                 a.append(h)
+#     return a
+# print(get_credentials_users('text.bin'))
+
+# import shutil
+# def create_backup(path, file_name, employee_residence):
+#     p = path + '/' + file_name
+#     with open(p, 'wb') as file_name:
+#         for k, v in employee_residence.items():
+#             f = (f'{k} {v}\n')
+#             h = f.encode()
+#             file_name.write(h)
+#     archive_name = shutil.make_archive('backup_folder', 'zip', 'folder' )
+#     return archive_name
+
+# import shutil
+#
+# def unpack(archive_path, path_to_unpack):
+#     p = path_to_unpack
+#     shutil.unpack_archive(archive_path, p)
 
 
-print(get_credentials_users('text.bin'))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

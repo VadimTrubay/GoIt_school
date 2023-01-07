@@ -3,11 +3,16 @@ import re
 from pathlib import Path
 import shutil
 
-suff_dict = {'images': ['.jpg', '.jpeg', '.png', '.svg', '.bmp', '.tft'],
-             'documents': ['.txt', '.docx', '.doc', '.docm', '.dox', '.xls', '.xlsx', '.rtf', '.ppt', '.pptx', '.csv'],
-             'audio': ['.mp3', '.ogg', '.wav', '.wma', '.arm'],
-             'video': ['.avi', '.mov', '.mp4', '.mpeg', '.mkv'],
-             'archives': ['.tar', '.gz', '.zip']}
+suff_dict = {"images": [".jpg", ".jpeg", ".png", ".gif", ".tiff", ".ico", ".bmp", ".webp", ".svg"],
+             "documents": [".md", ".epub", ".txt", ".docx", ".doc", ".ods", ".odt", ".dotx", ".docm", ".dox",
+                           ".rvg", ".rtf", ".rtfd", ".wpd", ".xls", ".xlsx", ".ppt", ".pptx", ".csv", ".xml"],
+             "archives": [".iso", ".tar", ".gz", ".7z", ".dmg", ".rar", ".zip"],
+             "audio": [".aac", ".m4a", ".mp3", "ogg", ".raw", ".wav", ".wma"],
+             "video": [".avi", ".flv", ".wmv", ".mov", ".mp4", ".webm", ".vob", ".mpg", ".mpeg", ".3gp"],
+             "pdf": [".pdf"],
+             "html": [".html", ".htm", ".xhtml"],
+             "exe_msi": [".exe", ".msi"],
+             "python": [".py", ".pyw"]}
 
 
 def normalize(name: str) -> str:
@@ -78,12 +83,9 @@ def remove_dir(subdir: list):
     :param subdir: список с абсолютными путями к удаляемым директориям.
     """
     for path in subdir:
-        try:
-            if len(os.listdir(path)) > 0 or Path(path).name in suff_dict:
-                continue
-            Path(path).rmdir()
-        except FileNotFoundError:
+        if len(os.listdir(path)) > 0 or Path(path).name in suff_dict:
             continue
+        Path(path).rmdir()
 
 
 def sort_func(path: str) -> tuple:
@@ -146,13 +148,10 @@ def main():
             if item.name == 'archives':
                 for arch in item.iterdir():
                     name = item / arch.stem
+                    print(arch)
                     name.mkdir(parents=True, exist_ok=True)
-                    try:
-                        shutil.unpack_archive(arch, name)
-                    except Exception:
-                        continue
+                    shutil.unpack_archive(arch, name)
                     arch.unlink()
-
             result = [f for f in os.listdir(item)]
             print(f"files in category {item.name}: {', '.join(result)}")
 

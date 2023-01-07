@@ -8,7 +8,7 @@ def main():
     else:
         user_input = sys.argv[1]
     path = Path(user_input)
-    if path.exists:
+    if path.exists():
         if path.is_dir():
             # items = path.iterdir()  # search directory
             # items = path.glob('*.py')  # search patterns
