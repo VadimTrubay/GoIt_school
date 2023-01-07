@@ -4,11 +4,16 @@ import sys
 from pathlib import Path
 import shutil
 
-suff_dict = {'images': ['.jpg', '.jpeg', '.png', '.svg', '.bmp', '.tft', '.gif'],
-             'documents': ['.txt', '.docx', '.doc', '.docm', '.dox', '.xls', '.xlsx', '.rtf', '.ppt', '.pptx', '.csv'],
-             'audio': ['.mp3', '.ogg', '.wav', '.wma', '.arm'],
-             'video': ['.avi', '.mov', '.mp4', '.mpeg', '.mkv'],
-             'archives': ['.tar', '.gz', '.zip']}
+suff_dict = {'images': ['.jpg', '.jpeg', '.png', '.gif', '.tiff', '.ico', '.bmp', '.webp', '.svg'],
+             'documents': ['.md', '.epub', '.txt', '.docx', '.doc', '.ods', '.odt', '.dotx', '.docm', '.dox',
+                           '.rvg', '.rtf', '.rtfd', '.wpd', '.xls', '.xlsx', '.ppt', '.pptx', '.csv', '.xml'],
+             'archives': ['.tar', '.gz', '.zip'],
+             'audio': ['.aac', '.m4a', '.mp3', '.ogg', '.raw', '.wav', '.wma'],
+             'video': ['.avi', '.flv', '.wmv', '.mov', '.mp4', '.webm', '.vob', '.mpg', '.mpeg', '.3gp'],
+             'pdf': ['.pdf'],
+             'html': ['.html', '.htm', '.xhtml'],
+             'exe_msi': ['.exe', '.msi'],
+             'python': ['.py', '.pyw']}
 
 
 def normalize(name: str) -> str:
@@ -67,21 +72,24 @@ def sort_func(path: str) -> tuple:
     curr_dir = path
     subdir = []
     known_extensions, unknown_extensions = set(), set()
-    for root, dirs, files in os.walk(path):
-        for d in dirs:
-            if not d:
-                continue
-            subdir.append(f"{curr_dir / d}")
-        for file in files:
-            path_file = name_normalize(root, file)
-            ex_comp = False
-            for suf in suff_dict:
-                ex_comp = extension_comparison(curr_dir, path_file, suf)
-                if ex_comp:
-                    known_extensions.add(path_file.suffix)
-                    break
-            if not ex_comp:
-                unknown_extensions.add(path_file.suffix)
+    try:
+        for root, dirs, files in os.walk(path):
+            for d in dirs:
+                if not d:
+                    continue
+                subdir.append(f"{curr_dir / d}")
+            for file in files:
+                path_file = name_normalize(root, file)
+                ex_comp = False
+                for suf in suff_dict:
+                    ex_comp = extension_comparison(curr_dir, path_file, suf)
+                    if ex_comp:
+                        known_extensions.add(path_file.suffix)
+                        break
+                if not ex_comp:
+                    unknown_extensions.add(path_file.suffix)
+    except FileExistsError:
+        pass
 
     remove_dir(subdir)
     return list(known_extensions), list(unknown_extensions)
@@ -94,6 +102,7 @@ def main():
     known, unknown = '', ''
     path = Path(sys.argv[1])
     # path = Path('mess')
+
     if not path.exists():
         print('path does not exist')
         sys.exit(4)

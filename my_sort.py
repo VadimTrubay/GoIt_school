@@ -3,16 +3,16 @@ import re
 from pathlib import Path
 import shutil
 
-suff_dict = {"images": [".jpg", ".jpeg", ".png", ".gif", ".tiff", ".ico", ".bmp", ".webp", ".svg"],
-             "documents": [".md", ".epub", ".txt", ".docx", ".doc", ".ods", ".odt", ".dotx", ".docm", ".dox",
-                           ".rvg", ".rtf", ".rtfd", ".wpd", ".xls", ".xlsx", ".ppt", ".pptx", ".csv", ".xml"],
-             "archives": [".iso", ".tar", ".gz", ".7z", ".dmg", ".rar", ".zip"],
-             "audio": [".aac", ".m4a", ".mp3", "ogg", ".raw", ".wav", ".wma"],
-             "video": [".avi", ".flv", ".wmv", ".mov", ".mp4", ".webm", ".vob", ".mpg", ".mpeg", ".3gp"],
-             "pdf": [".pdf"],
-             "html": [".html", ".htm", ".xhtml"],
-             "exe_msi": [".exe", ".msi"],
-             "python": [".py", ".pyw"]}
+suff_dict = {'images': ['.jpg', '.jpeg', '.png', '.gif', '.tiff', '.ico', '.bmp', '.webp', '.svg'],
+             'documents': ['.md', '.epub', '.txt', '.docx', '.doc', '.ods', '.odt', '.dotx', '.docm', '.dox',
+                           '.rvg', '.rtf', '.rtfd', '.wpd', '.xls', '.xlsx', '.ppt', '.pptx', '.csv', '.xml'],
+             'archives': ['.tar', '.gz', '.zip'],
+             'audio': ['.aac', '.m4a', '.mp3', '.ogg', '.raw', '.wav', '.wma'],
+             'video': ['.avi', '.flv', '.wmv', '.mov', '.mp4', '.webm', '.vob', '.mpg', '.mpeg', '.3gp'],
+             'pdf': ['.pdf'],
+             'html': ['.html', '.htm', '.xhtml'],
+             'exe_msi': ['.exe', '.msi'],
+             'python': ['.py', '.pyw']}
 
 
 def normalize(name: str) -> str:
