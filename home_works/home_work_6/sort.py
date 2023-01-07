@@ -102,7 +102,6 @@ def main():
     known, unknown = '', ''
     path = Path(sys.argv[1])
     # path = Path('mess')
-
     if not path.exists():
         print('path does not exist')
         sys.exit(4)
