@@ -1,9 +1,10 @@
 import os
 import re
+import sys
 from pathlib import Path
 import shutil
 
-suff_dict = {'images': ['.jpg', '.jpeg', '.png', '.svg', '.bmp', '.tft'],
+suff_dict = {'images': ['.jpg', '.jpeg', '.png', '.svg', '.bmp', '.tft', '.gif'],
              'documents': ['.txt', '.docx', '.doc', '.docm', '.dox', '.xls', '.xlsx', '.rtf', '.ppt', '.pptx', '.csv'],
              'audio': ['.mp3', '.ogg', '.wav', '.wma', '.arm'],
              'video': ['.avi', '.mov', '.mp4', '.mpeg', '.mkv'],
@@ -116,7 +117,6 @@ def sort_func(path: str) -> tuple:
                     known_extensions.add(path_file.suffix)
                     break
             if not ex_comp:
-                move_file(Path(curr_dir) / "other", path_file)
                 unknown_extensions.add(path_file.suffix)
 
     remove_dir(subdir)
@@ -132,10 +132,11 @@ def main():
     меньше или равно 0, сообщение не печатается. Если больше нуля, то
     выводиться в терминал список полученный после работы функции сортировки.
     """
-    print('starting sorting...\n')
+    print('starting sorting...')
+    print('===================\n')
     known, unknown = '', ''
     # path = Path(sys.argv[1])
-    path = Path(r'\work_it\GitHub\GoIt_school\home_works\home_work_6\mess')
+    path = Path('mess')
     if not path.exists():
         print('path does not exist')
     else:
@@ -151,17 +152,19 @@ def main():
                         shutil.unpack_archive(arch, name)
                     except Exception:
                         continue
-                    arch.unlink()
-
-            result = [f for f in os.listdir(item)]
-            print(f"files in category {item.name}: {', '.join(result)}")
+            if item.is_dir():
+                result = [f for f in os.listdir(item)]
+                print(f"files in category {item.name}: {', '.join(result)}")
+            else:
+                continue
 
     if len(known) >= 0:
         print(f"\nknown extensions: {', '.join(known)}")
     if len(unknown) >= 0:
         print(f"unknown extensions: {', '.join(unknown)}\n")
 
-    print('sorting finally!')
+    print('================')
+    print('ending sorting!')
 
 
 if __name__ == "__main__":
