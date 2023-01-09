@@ -389,7 +389,12 @@ import utils
 print(utils.FILE_VERSION)
 utils.greeting('vad')
 utils.summa(5, 6)
+print(__name__)
+# print(dir(utils))
 
+# import  sys
+# print(sys.builtin_module_names)
+# print(sys.path)
 
 
 
