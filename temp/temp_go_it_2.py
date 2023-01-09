@@ -358,7 +358,37 @@
 # new_name = re.sub(r'\W', '_', new_name)
 # print(new_name)
 
+# fh = open(r'..\files\text.txt')
+# print(fh.read(12))  # read string from file
+# print(fh.tell())  # search for cursor
+# fh.seek(0)  # move cursor to beginning of file
+# print(type(fh))  # type of file
+# print(fh)
+# print(fh.readlines())  # read lines from file
+# print(fh.readline())  # read line from file
+# fh.close()  # close file
 
+# with open(r'..\files\logo.png', 'rb') as fh:
+#     data = fh.read()
+#     # print(len(data))
+#     # d = data[:50]
+# with open(r'..\files\new_logo.png', 'wb') as file:
+#     file.write(data)
+
+# import shutil
+# print(shutil.make_archive('must', 'zip', r'\work_it\GitHub\GoIt_school\files\must_sort'))  # pack files
+# shutil.unpack_archive('must.zip', r'\work_it\GitHub\GoIt_school\files\must_sort1')  # unpack files
+
+# import shutil
+# shutil.rmtree(r'\work_it\GitHub\GoIt_school\files\must_sort1')  # delete directory
+# shutil.copy(r'\work_it\GitHub\GoIt_school\files\logo.png', r'\work_it\GitHub\GoIt_school\files\must_sort')  # copy files
+# shutil.move(r'\work_it\GitHub\GoIt_school\temp\logo.png', r'\work_it\GitHub\GoIt_school\files\logo.png')  # move files
+
+
+import utils
+print(utils.FILE_VERSION)
+utils.greeting('vad')
+utils.summa(5, 6)
 
 
 
