@@ -385,18 +385,21 @@
 # shutil.move(r'\work_it\GitHub\GoIt_school\temp\logo.png', r'\work_it\GitHub\GoIt_school\files\logo.png')  # move files
 
 
-import utils
-print(utils.FILE_VERSION)
-utils.greeting('vad')
-utils.summa(5, 6)
-print(__name__)
+# import utils
+# print(utils.FILE_VERSION)
+# utils.greeting('vad')
+# utils.summa(5, 6)
+# print(__name__)
 # print(dir(utils))
 
 # import  sys
 # print(sys.builtin_module_names)
 # print(sys.path)
 
-
+# from lenght_d import get_length_d
+# get_length_d(13)
+# import lenght_d
+# lenght_d.get_length_d(10)
 
 
 
