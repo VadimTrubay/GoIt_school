@@ -9,5 +9,5 @@ setup(
     author_email='vadnetvadnet@ukr.net',
     license='MIT',
     packages=find_namespace_packages(),
-    entry_points={'console_scripts': ['clean=clean_folder_vad.clean:path']}
+    entry_points={'console_scripts': ['clean=clean_folder_vad.clean:main']}
 )

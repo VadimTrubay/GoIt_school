@@ -402,10 +402,47 @@
 # lenght_d.get_length_d(10)
 
 
+# import re
+# def is_integer(s):
+#     new_s = re.sub(r'\D', '', s)
+#     return True if new_s and len(s) >= 1 else False
+#
+# print(is_integer('asd56'))
 
+# def capital_text(s):
+#     d = ['.', '!', '?']
+#     f = True
+#     n = ''
+#     for i in s:
+#         if i in d:
+#             f = False
+#         if not f and i.isalpha():
+#             n += i.capitalize()
+#             f = True
+#         else:
+#             n += i
+#     n = n[0].capitalize() + n[1:]
+#     return n
+# print(capital_text('fdbbd fgdg. dg rdg! e dfs? adax'))
 
-
-
+# def solve_riddle(riddle, word_length, start_letter, reverse=False):
+#     s = ''
+#     if (reverse or not reverse) and start_letter not in riddle:
+#         return s
+#     elif not reverse:
+#         for i in riddle:
+#             if i == start_letter:
+#                 s = riddle.index(i)
+#                 q = riddle[s:s+word_length]
+#                 return q
+#     elif reverse:
+#         for i in riddle:
+#             if i == start_letter:
+#                 s = riddle.index(i)+1
+#                 r = s - word_length
+#                 n = riddle[r:s]
+#                 return n[::-1]
+# print(solve_riddle('aaatttrrr', 5, 'p', True))
 
 
 
